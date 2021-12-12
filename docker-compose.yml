@@ -6,8 +6,14 @@ services:
     build:
       context: .
       dockerfile: scaleable-web-app/Dockerfile
+    ports:
+      - "8080:80"
+      - "8081:443"
   scaleable-web-api:
     image: ${DOCKER_REGISTRY-}scaleablewebapi
     build:
       context: .
       dockerfile: scaleable-web-api/Dockerfile
+    ports:
+      - "8082:80"
+      - "8083:443"
