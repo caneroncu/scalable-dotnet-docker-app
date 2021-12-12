@@ -7,3 +7,9 @@ This project might help you out, if you want to:
 If you have any questions hit me up at caneroncu@gmail.com
 
 Happy coding!
+
+# TODO - Tech stacks to add:
+- Swagger
+- Redis
+- MongoDB
+- PostgreSQL
