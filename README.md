@@ -14,3 +14,4 @@ Happy coding!
 - MongoDB
 - PostgreSQL
 - Graphana
+- Analytics
