@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  scaleable-web-app:
+    image: ${DOCKER_REGISTRY-}scaleablewebapp
+    build:
+      context: .
+      dockerfile: scaleable-web-app/Dockerfile
+  scaleable-web-api:
+    image: ${DOCKER_REGISTRY-}scaleablewebapi
+    build:
+      context: .
+      dockerfile: scaleable-web-api/Dockerfile
