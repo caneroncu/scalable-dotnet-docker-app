@@ -1,19 +1,21 @@
 version: '3.4'
 
 services:
-  scaleable-web-app:
-    image: ${DOCKER_REGISTRY-}scaleablewebapp
+  scalable-web-app:
+    image: ${DOCKER_REGISTRY-}scalablewebapp
     build:
       context: .
-      dockerfile: scaleable-web-app/Dockerfile
+      dockerfile: scalable-web-app/Dockerfile
     ports:
       - "8080:80"
       - "8081:443"
-  scaleable-web-api:
-    image: ${DOCKER_REGISTRY-}scaleablewebapi
+    depends_on:
+    - scalable-web-api
+  scalable-web-api:
+    image: ${DOCKER_REGISTRY-}scalablewebapi
     build:
       context: .
-      dockerfile: scaleable-web-api/Dockerfile
+      dockerfile: scalable-web-api/Dockerfile
     ports:
       - "8082:80"
       - "8083:443"
